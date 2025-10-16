@@ -122,7 +122,7 @@
 					"recurrence": {
 						"frequency": "Hour",
 						"interval": 1,
-						"startTime": "2025-10-15T21:26:00",
+						"startTime": "2025-10-15T21:33:00",
 						"timeZone": "E. South America Standard Time"
 					}
 				}
