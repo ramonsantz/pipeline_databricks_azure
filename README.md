@@ -2,6 +2,7 @@
 <p align="center">
   <img width="580" height="320" alt="Pipeline no Azure Data Factory" src="https://github.com/user-attachments/assets/fb6a3189-3dcc-4e41-99e1-b9e2c2ae585f" />
 </p>
+
 Este projeto demonstra a criação e orquestração de um **pipeline de dados em nuvem** utilizando **Azure Databricks** e **Azure Data Factory (ADF)**.  
 O objetivo é construir um fluxo automatizado de ingestão, transformação e armazenamento de dados em um **Data Lake**, aplicando boas práticas de Engenharia de Dados.
 
@@ -10,6 +11,9 @@ O objetivo é construir um fluxo automatizado de ingestão, transformação e ar
 ## Visão Geral
 
 O pipeline desenvolvido realiza todas as etapas de um fluxo moderno de dados:
+<p align="center">
+<img width="1366" height="630" alt="Image" src="https://github.com/user-attachments/assets/57a0c430-d6e5-4c24-9933-f74ccadabc4c" />
+</p>
 
 - Leitura de um **dataset JSON de imóveis** armazenado na camada **Inbound** (`dados_brutos_imoveis.json`);
 - Processamento e transformação dos dados no **Azure Databricks**, gerando as camadas **Bronze** e **Silver**;
@@ -21,10 +25,7 @@ Esse projeto tem como propósito **demonstrar o ciclo completo de um pipeline de
 
 ## Estrutura de Camadas do Data Lake
 
-Inbound → Bronze → Silver
-
-ruby
-Copy code
+### Inbound → Bronze → Silver
 
 | Camada | Descrição |
 |:--------|:-----------|
@@ -51,25 +52,24 @@ Copy code
 
 A estrutura do repositório no GitHub está organizada da seguinte forma:
 
-📁 pipeline_databricks_azure/
-│
-├── 📁 databricks-curso-pipeline/ 
-├── 📁 factory/ # Definição da factory do Azure Data Factory
-├── 📁 linkedService/ # Conexões entre ADF, Databricks e Data Lake
-├── 📁 notebooks/ # Notebooks de transformação no Databricks
-│ ├── inbound_to_bronze.py
-│ ├── bronze_to_silver.py
-│ └── python_etl_inbound_to_silver.py
-│
-├── 📁 pipeline/ # Pipeline principal do Data Factory
-│ └── datalake_ingestion_pipeline.json
-│
-├── 📁 trigger/ # Gatilho configurado para execução a cada 1 hora
-│ └── pipeline_trigger.json
-│
-├── .gitignore
-├── publish_config.json
-└── README.md
+📁 pipeline_databricks_azure/<br>
+├── 📁 databricks-curso-pipeline/ <br>
+├── 📁 factory/     # Definição da factory do Azure Data Factory<br>
+├── 📁 linkedService/     # Conexões entre ADF, Databricks e Data Lake<br>
+├── 📁 notebooks/     # Notebooks de transformação no Databricks<br>
+│ ├── inbound_to_bronze.py<br>
+│ ├── bronze_to_silver.py<br>
+│ └── python_etl_inbound_to_silver.py<br>
+│<br>
+├── 📁 pipeline/     # Pipeline principal do Data Factory<br>
+│ └── datalake_ingestion_pipeline.json<br>
+│<br>
+├── 📁 trigger/     # Gatilho configurado para execução a cada 1 hora<br>
+│ └── pipeline_trigger.json<br>
+│<br>
+├── .gitignore<br>
+├── publish_config.json<br>
+└── README.md<br>
 
 ---
 
@@ -104,22 +104,24 @@ A estrutura do repositório no GitHub está organizada da seguinte forma:
 
 ## Pipeline no Data Factory
 
-Fluxo visual do pipeline criado no **Azure Data Factory**:
+### Fluxo visual do pipeline criado no **Azure Data Factory**:
 
-[ Databricks: ingestao-camada-bronze ] ---> [ Databricks: ingestao-camada-silver ]
+<p align="center">
+<img width="503" height="290" alt="Image" src="https://github.com/user-attachments/assets/32f6889e-0a13-49bf-a749-819e5cd971d7" />
+</p>
 
-yaml
-Copy code
+### Cada notebook é executado em sequência, processando os dados das camadas anteriores e gravando os resultados tratados no Data Lake.
 
-Cada notebook é executado em sequência, processando os dados das camadas anteriores e gravando os resultados tratados no Data Lake.
-
-*(Na imagem abaixo, ambas as atividades aparecem com status “✔️ Bem-sucedido” após a execução do pipeline.)*
+*(Na imagem abaixo, ambas as atividades aparecem com status “✅ Bem-sucedido” após a execução do pipeline.)*
+<p align="center">
+<img width="800" height="467" alt="Image" src="https://github.com/user-attachments/assets/1edb6fea-42ff-4be2-8525-c319a5825360" />
+</p>
 
 ---
 
 ## 🕒 Automação com Gatilho
 
-O **gatilho (trigger)** do ADF executa automaticamente o pipeline a cada **1 hora**, garantindo a atualização contínua dos dados.  
+O **gatilho (trigger)** executa automaticamente o pipeline a cada **1 hora**, garantindo a atualização contínua dos dados.  
 Essa automação elimina a necessidade de execução manual, mantendo o fluxo sempre atualizado.
 
 ---
@@ -138,4 +140,4 @@ Essa automação elimina a necessidade de execução manual, mantendo o fluxo se
 
 **Ramon Santos**  
 Projeto pessoal desenvolvido para prática e portfólio voltado à **Engenharia de Dados**  
-📧 Contato: [LinkedIn](#)
+📧 Contato: [LinkedIn](https://www.linkedin.com/in/ramonsantoss/)
