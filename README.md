@@ -8,7 +8,7 @@ O objetivo é construir um fluxo automatizado de ingestão, transformação e ar
 
 ---
 
-## Visão Geral
+## 👁️ Visão Geral
 
 O pipeline desenvolvido realiza todas as etapas de um fluxo moderno de dados:
 <p align="center">
@@ -23,7 +23,7 @@ Esse projeto tem como propósito **demonstrar o ciclo completo de um pipeline de
 
 ---
 
-## Estrutura de Camadas do Data Lake
+## 🗃️ Estrutura de Camadas do Data Lake
 
 ### Inbound → Bronze → Silver
 
@@ -126,7 +126,7 @@ Essa automação elimina a necessidade de execução manual, mantendo o fluxo se
 
 ---
 
-## 🧾 Resultados
+## 🎯 Resultados
 
 - Dados brutos de imóveis transformados em formato Delta otimizado;  
 - Pipeline automatizado e monitorado via ADF;  
@@ -137,7 +137,5 @@ Essa automação elimina a necessidade de execução manual, mantendo o fluxo se
 ---
 
 ## 👨‍💻 Autor
-
-**Ramon Santos**  
-Projeto pessoal desenvolvido para prática e portfólio voltado à **Engenharia de Dados**  
+**Ramon Santos** - Projeto pessoal desenvolvido para prática e portfólio voltado à **Engenharia de Dados**  
 📧 Contato: [LinkedIn](https://www.linkedin.com/in/ramonsantoss/)
