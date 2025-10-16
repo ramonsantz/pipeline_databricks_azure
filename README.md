@@ -1,5 +1,7 @@
-# 🚀 Pipeline de Dados na Azure com Databricks e Data Factory
-
+# Pipeline de Dados na Azure com Databricks e Data Factory
+<p align="center">
+  <img width="580" height="320" alt="Pipeline no Azure Data Factory" src="https://github.com/user-attachments/assets/fb6a3189-3dcc-4e41-99e1-b9e2c2ae585f" />
+</p>
 Este projeto demonstra a criação e orquestração de um **pipeline de dados em nuvem** utilizando **Azure Databricks** e **Azure Data Factory (ADF)**.  
 O objetivo é construir um fluxo automatizado de ingestão, transformação e armazenamento de dados em um **Data Lake**, aplicando boas práticas de Engenharia de Dados.
 
@@ -100,7 +102,7 @@ A estrutura do repositório no GitHub está organizada da seguinte forma:
 
 ---
 
-## Exemplo de Pipeline no Data Factory
+## Pipeline no Data Factory
 
 Fluxo visual do pipeline criado no **Azure Data Factory**:
 
